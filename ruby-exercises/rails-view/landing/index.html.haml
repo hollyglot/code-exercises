@@ -1,0 +1,44 @@
+= jquery_ready do
+  :plain
+    setSortByForPrint();
+
+.main
+  .my-library.products-list{ data: { layout: selected_layout }}
+    .main-part
+      .mp-header
+        .products-count
+          You have
+          = pluralize(@products.count, 'material')
+          in your library
+        %ul.buttons
+          %li
+            = link_to '#share-modal-modal', title: 'Share a list of items in your library with a colleague. The colleague must be a subscriber to access the reviews on LearningList.com.', data: { toggle: 'modal' } do
+              %i.font-icon-share
+          %li
+            = link_to subscriber_library_print_path(:sort_by => 'none'), method: :post, title: 'Print the Title, Publisher, ISBN, MSRP, and Alignment Percentage of all items listed in My Library.', id: 'print-library', target: '_blank' do
+              %i.font-icon-print
+      .mp-control
+        = render 'layout_links'
+        .select-wrapper
+          .sort-header Sort by:
+          = select_tag :sort_by, sort_options(selected: (params[:sort_by] ? params[:sort_by] : 'natural')), id: 'sort-by', class: 'select2', include_blank: true, data: { placeholder: 'Sort by:' }
+
+      #compare-selection
+        .header.library
+          Compare up to 3 products
+        .compare-images
+          .image-container.compare-image-1.library
+            .remove
+          .image-container.compare-image-2.library
+            .remove
+          .image-container.compare-image-3.library
+            .remove
+        = link_to 'Compare Product Info.', compare_subscriber_products_path(:products => "nil"), method: :post, class: 'btn btn-primary', id: 'compare-products'
+        = link_to 'Compare Alignment', compare_subscriber_alignment_reports_path(:products => "nil"), method: :post, class: 'btn btn-primary library', id: 'compare-reports'
+
+      .mp-content
+        = render "subscriber/library/products/#{selected_layout}", products: @products
+    .right-sidebar
+      = render 'subscriber/library/landing/sidebar', reviews: @my_reviews, saved_searches: resource.stored_saved_searches
+
+= render 'subscriber/products/share_product_modal', resource: current_subscriber.library if current_subscriber.library.products.present?

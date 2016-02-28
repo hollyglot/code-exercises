@@ -1,0 +1,9 @@
+.mp-grid-item
+  = link_to '', subscriber_library_product_path(current_subscriber.library, product_id: product.id), class: 'btn remove-from-library with-hint font-icon-remove', data: { confirm: 'init', modal: '#remove-from-library-modal' }, title: 'Remove item from library', remote: true, method: :delete
+  = link_to subscriber_product_path(product), class: 'mp-image image-shadow' do
+    = image_tag product.image.grid_preview, alt: product.title
+  = link_to product.title, subscriber_product_path(product), class: 'font-icon-book mp-title'
+
+  .compare-select
+    = check_box_tag 'compare', product.id, false, class: 'compare-checkbox'
+    Compare

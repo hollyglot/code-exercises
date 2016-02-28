@@ -1,0 +1,72 @@
+.accordion-group.last
+  .accordion-heading
+    %a.accordion-toggle{'data-parent' => '#right-sidebar-accordion', 'data-toggle' => 'collapse', :href => '#training-resources'}
+      Training Resources
+      %i.font-icon-dropdown_arrow
+  #training-resources.accordion-body.collapse
+    .accordion-inner
+      .sidebar-items-container
+        .sidebar-item
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.fa-video-camera
+                %td
+                  = link_to '#overview-video', data: { toggle: 'modal' }, class: 'resource-title' do
+                    Overview Video
+    .accordion-inner
+      .sidebar-items-container
+        .sidebar-item
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.fa-question
+                %td
+                  = link_to subscriber_how_do_i_path, class: 'resource-title', target: '_blank' do
+                    How Do I?
+    .accordion-inner
+      .sidebar-items-container
+        .sidebar-item
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.fa-file-pdf-o
+                %td
+                  = link_to 'https://s3.amazonaws.com/ll406/downloads/Training_Resources/Guidance+-+Using+Learning+List+for+Test+Analysis.pdf', target: '_blank', class: 'resource-title' do
+                    Using Learning List for Test Analysis
+    .accordion-inner
+      .sidebar-items-container
+        .sidebar-item
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.fa-file-pdf-o
+                %td
+                  = link_to 'https://s3.amazonaws.com/ll406/downloads/Training_Resources/Guidance+-+Using+Learning+List+for+Selection.pdf', target: '_blank', class: 'resource-title' do
+                    Using Learning List in Your Selection Process
+    .accordion-inner
+      .sidebar-items-container
+        .sidebar-item
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.fa-file-pdf-o
+                %td
+                  = link_to 'https://s3.amazonaws.com/ll406/downloads/Training_Resources/Guidance+-+Using+Learning+List+for+Curriculum+Mapping+or+Lesson+Planning.pdf', target: '_blank', class: 'resource-title' do
+                    Using Learning List for Lesson Planning
+    .accordion-inner
+      .sidebar-items-container
+        .sidebar-item
+          %table
+            %tbody
+              %tr
+                %td
+                  %i.fa.fa-file-pdf-o
+                %td
+                  = link_to 'https://s3.amazonaws.com/ll406/downloads/Training_Resources/Guidance+-+Learning+List+for+Principals.pdf', target: '_blank', class: 'resource-title' do
+                    Learning List for Principals

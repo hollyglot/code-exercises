@@ -1,0 +1,13 @@
+%ul.layout-select
+  %li
+    = link_to '',
+      subscriber_library_root_path(layout: 'list', sort_by: params[:sort_by]),
+      class: "btn first ajax font-icon-list #{'active' if selected_layout.eql?('list')}",
+      data: { container: '.mp-content', item: '.mp-list-container'},
+      remote: true
+  %li
+    = link_to '',
+      subscriber_library_root_path(layout: 'grid', sort_by: params[:sort_by]),
+      class: "btn last ajax font-icon-grid #{'active' if selected_layout.eql?('grid')}",
+      data: { container: '.mp-content', item: '.mp-grid-container' },
+      remote: true

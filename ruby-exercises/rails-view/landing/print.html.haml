@@ -1,0 +1,40 @@
+:javascript
+  printable();
+
+.main
+  %h1{style: 'margin-top: 0'}
+    = @page.title
+  - if @products.present?
+    = link_to 'Print', 'javascript:window.print();', class: 'btn btn-primary'
+  - @products.each_with_index do |product, index|
+    .pdf-item
+      %h2.title
+        = "#{index.next}."
+        = product.title
+      .pdf-params
+        - @ar_with_ap_standard = ::Domain::Product::Views::AlignmentReport::CheckIfAP.! product
+        - product.finalized_alignment_reports.each do |report|
+          - @show_aligned_to_standard = report.alignment_template.standard.calculation_level != 0 ? true : false
+          - unless report.standard_name == 'TEKS' && @ar_with_ap_standard && current_subscriber.state != "TX"
+            .pdf-param
+              = report.title
+              - if @show_aligned_to_standard
+                #{':'}
+                %strong
+                  = report.coverage_with_percent
+      .pdf-params
+        .pdf-param
+          Publisher:
+          %strong
+            = product.publisher.name
+        - if product.first_component.isbn.present?
+          .pdf-param
+            ISBN:
+            %strong
+              = product.first_component.isbn
+        .pdf-param
+          MSRP:
+          %strong
+            = product.first_component.unit_price
+            = product.first_component.unit_of_measure
+

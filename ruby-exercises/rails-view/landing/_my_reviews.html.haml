@@ -1,0 +1,19 @@
+.accordion-group.first
+  .accordion-heading
+    = link_to '#my-reviews', class: 'accordion-toggle', data: { parent: '#right-sidebar-accordion', toggle: 'collapse' } do
+      My Reviews
+      %i.font-icon-dropdown_arrow
+  #my-reviews.accordion-body.collapse
+    .accordion-inner
+      .sidebar-items-container
+        - reviews.each do |review|
+          .sidebar-item
+            = link_to review.product.title, subscriber_product_path(review.product), class: 'title'
+            %span.date= l(review.created_at, format: :american_date)
+            .text
+              - if review.subscriber_comments.present?
+                .text
+                  = review.subscriber_comments.truncate(150)
+            .btn-table
+              = link_to 'View', subscriber_product_ratings_path(review.product), class: 'btn btn-left font-icon-menu'
+              = link_to 'Delete', subscriber_product_rating_path(review, product_id: review.product.id), class: 'btn btn-right font-icon-trash', data: { confirm: 'init', modal: '#delete-review-modal' }, method: :delete, remote: true

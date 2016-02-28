@@ -1,0 +1,11 @@
+.accordion-group
+  .accordion-heading
+    = link_to '#saved-searches-empty', class: 'accordion-toggle', data: { parent: '#right-sidebar-accordion', toggle: 'collapse' } do
+      My Searches (empty)
+      %i.font-icon-dropdown_arrow
+  #saved-searches-empty.accordion-body.collapse
+    .accordion-inner
+      .sidebar-items-container.empty
+        .empty-sprite.sprite-saved-searches-empty
+        %h2
+          If you like your search results, you can "save" your search criteria and the criteria you used will appear here.

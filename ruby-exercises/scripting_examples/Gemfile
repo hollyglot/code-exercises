@@ -1,0 +1,222 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.14'
+gem 'haml-rails', '>= 0.4'
+
+# Database
+gem 'mongoid'
+gem 'mongoid_slug'
+gem 'genghisapp'
+gem 'mongoid_rails_migrations'
+gem 'bson_ext'
+
+# Database tree
+gem 'mongoid-ancestry'
+
+# Authentication
+gem 'devise'
+
+# Models
+gem 'has_scope'
+gem 'inherited_resources'
+gem 'attr_encrypted'
+gem 'enumerize'
+
+# Api
+gem 'rabl'
+
+# Many gems dependent, i.e. jquery-rails, foreman, etc.
+gem 'thor'
+
+# Forms
+gem 'simple_form'
+gem 'nested_form'
+gem "select2-rails"
+
+# Errors
+gem 'bugsnag'
+gem 'rails_dt'
+
+# Mailers
+gem 'valid_email', :require => 'valid_email/email_validator'
+gem 'liquid'
+
+# Sub-domains
+gem 'subdomain-fu', '1.0.0.beta3', github: 'mbleigh/subdomain-fu'
+
+# Environment Variables
+gem 'figaro'
+
+# View styling
+gem 'show_for'
+
+#JQuery
+gem 'jquery-rails', '~> 3.1.2'
+gem 'jquery-ui-rails', '~> 4.1.2' # version 5.0 conflicts with Rails 3.2.14 dependency on railties 3.2.14
+
+# Styling
+gem 'html5-rails'
+gem 'rails-breadcrumbs'
+gem 'rails3-jquery-autocomplete', '~> 1.0.10'
+gem "autoprefixer-rails", group: :all
+
+# State Machine
+gem 'state_machine'
+
+
+# Editors
+gem 'redactor-rails', '~> 0.4'
+gem 'ckeditor'
+
+
+# Rack
+gem "rack-timeout"
+gem 'rack-zippy'
+
+# Time Helper
+gem 'business_time'
+
+# Spreadsheets
+gem 'roo', github: 'Empact/roo'
+gem 'axlsx_rails'
+
+# PDF Generator
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+# Validators
+gem 'client_side_validations'
+gem 'client_side_validations-simple_form'
+gem 'client_side_validations-mongoid'
+gem 'url_validator'
+gem 'jquery-validation-rails'
+
+# File Handlers
+gem 'mini_magick'
+gem 'rubyzip', "~> 0.9.9"
+gem 'carrierwave-mongoid', "~> 0.7.0", :require => 'carrierwave/mongoid'
+gem 'fog', '~> 1.0'
+
+
+# sidekiq
+gem 'sidekiq', '~> 2.7.0'
+gem 'sidekiq-failures'
+gem 'sidekiq-status'
+gem 'kiqstand'
+gem 'foreman'
+gem 'redis'
+
+# sidekiq admin
+gem 'sinatra', '>= 1.3.0', :require => nil
+gem 'slim'
+
+# JQuery Helpers
+gem 'active_link_to', '~> 1.0.1'
+
+# Cookies
+gem 'jquery-cookie-rails'
+
+# E-Commerce
+gem 'stripe'
+
+# HTTP Retrieval
+gem 'faraday', "~> 0.8.8"
+
+# Geolocation
+gem 'geokit', "~> 1.6.7"
+
+# SEO
+gem 'meta-tags', :require => 'meta_tags'
+
+# Search
+gem 'mongoid_fulltext'
+gem 'elasticsearch-persistence'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'bonsai-elasticsearch-rails'
+
+# Sitemap Generator
+gem 'sitemap_generator'
+
+# Pagination
+gem 'kaminari'
+gem 'jquery-infinite-pages'
+
+# Monitoring
+gem 'newrelic_rpm'
+
+# SSL
+gem 'rack-ssl-enforcer'
+
+# Utilities
+gem 'output'
+gem 'single'
+gem 'setter'
+
+# Analytics Tracking
+gem 'keen'
+
+
+# Development
+gem 'letter_opener', group: :development, group: :staging
+gem 'puma', group: :development
+gem 'quiet_assets', group: :development
+gem 'mail_view', :git => 'https://github.com/37signals/mail_view.git', group: :development
+gem 'hirb', group: :development
+gem 'awesome_print', :require => 'ap', group: :development
+gem 'wirble', group: :development
+gem 'rb-readline', group: :development
+gem 'meta_request', group: :development
+gem "better_errors", group: :development
+gem "binding_of_caller", group: :development
+gem 'rack-mini-profiler', require: false, group: :development
+
+gem 'sushi', group: :tools
+gem 'nifty-generators', group: :tools
+gem 'net-ssh', '~> 2.7.0', group: :tools
+
+gem 'mongoid_colored_logger', group: :development, group: :test
+
+gem 'ffaker', "~> 1.25.0", group: :test
+gem 'factory_girl_rails', group: :test
+gem 'timecop', group: :test
+gem 'rspec-rails', group: :test
+gem 'rspec-instafail', group: :test
+gem 'rspec-given', group: :test
+gem 'capybara-puma', group: :test
+gem 'capybara-webkit', group: :test
+gem 'mongoid-rspec', group: :test
+gem 'guard', group: :test
+gem 'guard-rspec', group: :test
+gem 'guard-spin', group: :test
+gem 'fuubar', group: :test
+gem 'database_cleaner', group: :test
+gem 'rb-inotify', :require => false, group: :test
+gem 'rb-fsevent', :require => false, group: :test
+gem 'rb-fchange', :require => false, group: :test
+gem 'launchy', :require => false, group: :test
+gem 'simplecov', :require => false, group: :test
+
+
+# Gems used only for assets and not required
+# in production environments by default.
+gem 'therubyracer', '~> 0.12.1', platform: :ruby, require: 'v8', group: :assets
+gem 'oily_png', group: :assets
+gem 'coffee-rails', group: :assets
+gem 'uglifier', group: :assets
+
+gem 'jquery-datatables-rails', '~> 2.1.10.0.2', group: :assets
+gem 'sass-rails', group: :assets
+gem 'compass-rails', group: :assets
+gem 'compass-h5bp', group: :assets
+gem 'bootstrap-sass', '~> 2.3.1.0', group: :assets
+gem 'bootstrap-x-editable-rails', group: :assets
+gem 'turbo-sprockets-rails3', group: :assets
+gem 'zeroclipboard-rails', group: :assets
+
+group :production, :staging do
+  gem 'unicorn'
+  gem 'rails_12factor'
+end
+
+ruby '1.9.3'

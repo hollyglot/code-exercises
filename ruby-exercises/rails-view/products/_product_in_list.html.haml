@@ -1,0 +1,62 @@
+.mp-list-item
+  .left-part
+    = link_to subscriber_product_path(product), class: 'mp-image image-shadow' do
+      = image_tag product.image.list_preview, alt: product.title
+    = link_to 'See Full Reviews', subscriber_product_path(product), class: 'btn btn-blue see-reviews-button'
+
+    .compare-select
+      = check_box_tag 'compare', product.id, false, class: 'compare-checkbox'
+      Compare
+  .right-part
+    = link_to '', subscriber_library_product_path(current_subscriber.library, product_id: product.id), class: 'btn remove-from-library with-hint font-icon-remove', data: { confirm: 'init', modal: '#remove-from-library-modal' }, title: 'Remove item from library', remote: true, method: :delete
+    = link_to product.title, subscriber_product_path(product), class: 'font-icon-book mp-title'
+    .meta-data-wrapper
+      %ul.meta-data
+        %li
+          .grade
+            = "#{Component::GRADES_FOR_SEARCH[product.first_component.grade]} "
+          .subject
+            = "#{product.first_component.subject.title}"
+        - unless product.first_component.purchasing_url.blank?
+          %li{id: "#{product.id}"}
+            = link_to product.publisher_name, product.first_component.purchasing_url, target: '_blank', class: 'publisher-url'
+        - else
+          %li{id: "#{product.id}"}
+            = link_to product.publisher_name, product.publisher_company_website, target: '_blank', class: 'publisher-url'
+    .equal-height-blocks-wrapper
+      .rounded-block.alignment-report.equal-height-block
+        .rounded-block-header
+          %h4.rounded-block-heading Alignment Report
+        - if product.publish_without_alignment_report
+          %p.specifically-product.small_standards_subset
+            The state's alignment report for this product will be published once the state adoption process is complete.
+        - elsif product.small_standards_subset? && product.components.first.supplemental_replacement_text && product.components.first.supplemental_replacement_text != 'None'
+          .rounded-block-item.one.small_standards_subset
+            = product.components.first.supplemental_replacement_text
+            %br
+
+        - else
+          - @ar_with_ap_standard = ::Domain::Product::Views::AlignmentReport::CheckIfAP.! product
+          - product.finalized_alignment_reports.each do |report|
+            - unless report.standard_name == 'TEKS' && @ar_with_ap_standard && current_subscriber.state != "TX"
+              - @show_coverage = report.alignment_template.standard.calculation_level != 0 ? true : false
+              .rounded-block-item{ class:product.alignment_reports.count == 1 ? 'one' : '' }
+                %span.name
+                  = report.title
+                - if @show_coverage
+                  %span.value
+                    -# Copyright displays if CSS is deleted to circumvent CSS no selection
+                    .copyright-content
+                      Learning List's content is copyrighted. All rights reserved. &copy; 2015 Learning List
+                    = report.coverage_percent
+                    %span.small-p
+                      ==%
+      .rounded-block.consumer-ratings.equal-height-block
+        .rounded-block-header
+          %h4.rounded-block-heading Editorial Review
+        .rounded-block-item
+          -if product.product_review.present? &&  product.product_review.intro?
+            -# Copyright displays if CSS is deleted to circumvent CSS no selection
+            .copyright-content
+              Learning List's content is copyrighted. All rights reserved. &copy; 2015 Learning List
+            = raw product.product_review.intro

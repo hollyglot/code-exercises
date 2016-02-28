@@ -1,0 +1,6 @@
+$('.mp-content').html('<%= j render "subscriber/library/products/#{selected_layout}", products: @products %>');
+$('.layout-select').replaceWith('<%= j render 'layout_links' %>');
+$('.my-library').data('layout', '<%= selected_layout %>');
+$('.mp-content').css('opacity', '1');
+$('.main').removeClass('loading');
+setClickEventTrackers();

@@ -1,0 +1,664 @@
+.primary-accordion
+  %h1.primary-accordion-title How do I?
+  .primary-accordion-content
+    .left-part.primary-accordion-list
+      %ul
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link active', data: { for: 'resources-account-accordion' } do
+            Manage My Account(s)
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-request-review-accordion' } do
+            Request a Review
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-library-accordion' } do
+            Use My Library
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-search-reviews-accordion' } do
+            Search or Compare Product Reviews
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-alignment-reports-accordion' } do
+            Access Alignment Reports
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-editorial-reviews-accordion' } do
+            Access Editorial Reviews
+        %li
+          = link_to 'javascript: void(0);', class: 'terms-link', data: { for: 'resources-ratings-accordion' } do
+            Submit or Read Educator Ratings
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-fill-in-the-gap-accordion' } do
+            Use Fill-in-the-Gap
+        %li
+          = link_to 'javascript: void(0);', class: 'primary-accordion-link', data: { for: 'resources-icons-accordion' } do
+            What is this icon...
+
+    .right-part
+
+      / ===============================  Manage My Account(s)   ================================================
+
+      #resources-account-accordion.accordion.resources.big-accordion
+
+        / ----------------   Managing or Creating an Account Video   ----------------
+        #title-account-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-account-video', data: { parent: '#resources-account-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Managing or Creating an Account
+          #resource-account-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/MrORZOJMSWc?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+
+        / ----------------   Change my password or edit my account information?   ----------------
+        #title-password.accordion-group
+          .accordion-heading
+            = link_to '#resource-password', data: { parent: '#resources-account-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Change my password or edit my account information?
+          #resource-password.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Once you have logged in, click on 
+                %i.sprite-icon.sprite-my-account
+                in the far right side of the blue bar at the top of each page. In the dropdown menu that appears, click on
+                %i.sprite-icon.sprite-setting
+                to access your contact information, billing information, subscription renewal date and your password. Once you have edited any of your account information, click on “Update” at the bottom of that page to save your edits.
+
+        / ----------------   Authorize new users under the district/campus' account?   ----------------
+        #title-authorize.accordion-group
+          .accordion-heading
+            = link_to '#resource-authorize', data: { parent: '#resources-account-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Authorize new users under the district/campus' account?
+          #resource-authorize.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %i
+                  You must be the account manager for your district/campus' account to authorize new users.
+                Once you have logged in, click on “My Account” and in the dropdown menu that appears, click on 
+                %i.sprite-icon.sprite-setting
+                \. An “Account Management” menu of options appears. Select the 
+                %i.sprite-icon.sprite-account 
+                tab which will reveal a box for you to enter the email addresses of authorized users. Only district/campus employees and/or school board members who have an official district/campus email address can be added as authorized users. To authorize a new user, you must enter the authorized user's district/charter campus email address. There is no limit on the number of authorized users that can be added under the district/campus' account. You may add multiple authorized users at one time, separating their email addresses by either commas or semi-colons. Each newly authorized user will receive an email inviting him/her to access Learning List's reviews and set up unique user and login information.
+
+        / --------   Help other teachers access Learning List's reviews using our district/campus' subscription?   -------
+        #title-other-teachers.accordion-group
+          .accordion-heading
+            = link_to '#resource-other-teachers', data: { parent: '#resources-account-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Help other teachers access Learning List's reviews using our district/campus' subscription?
+          #resource-other-teachers.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Contact the manager of your district/campus' subscription. You can find their contact info with the "Think Your District or Campus May Have Subscribed" search tool described in the following How do I?:
+                = link_to '#resource-find-district', data: { parent: '#resources-account-accordion', toggle: 'collapse' } do
+                  Find out if another district/campus...
+                The manager of a district/campus' subscription may authorize an unlimited number of employees/board members to access to access the reviews on Learning List under that subscription. Each newly authorized user will receive an email inviting him/her to create a unique account. To create an account, the authorized user must log into Learning List with his/her official district or campus email address and create a unique password. Learning List's Terms of Service specify that an authorized user may not share his/her account with. Doing so will result in termination of the authorized user's account and jeopardizes the district/campus's subscription.
+
+        / ----------------   Find out if another district/campus has subscribed to Learning List?   ----------------
+        #title-find-district.accordion-group
+          .accordion-heading
+            = link_to '#resource-find-district', data: { parent: '#resources-account-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Find out if another district/campus has subscribed to Learning List?
+          #resource-find-district.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Scroll to the bottom of the Learning List Homepage to access the “Think Your District or Campus May Have Subscribed” search tool. Type in the name of the district or campus in question. For districts, include “ISD” in the name.
+
+
+      / ============================================  Request a Review   ================================================
+
+      #resources-request-review-accordion.accordion.resources.big-accordion.hide
+        #title-request-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-request-video', data: { parent: '#resources-request-review-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Request a Review
+          #resource-request-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/E-YydXEb44o?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+        #title-request-review.accordion-group
+          .accordion-heading
+            = link_to '#resource-request-review', data: { parent: '#resources-request-review-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Request a review of a publisher's product?
+          #resource-request-review.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Any subscriber or authorized user may request a review of a product that has not yet been reviewed by Learning List. To request a review, once you have logged into Learning List, click on the 
+                %i.sprite-icon.sprite-request-a-review 
+                tab in the blue bar at the top of each page. A short web form will appear. Fill in the requested information, then scroll down to the bottom of the page and click on 
+                %i.sprite-icon.sprite-submit-a-request
+                \. Learning List will receive an email with the requested product information and will forward the email (without the requester''s name) to our contact in the publishing company. If the publisher has not responded to the request within two weeks, Learning List will send the requester the publishing contact's name, email and/or phone number. The requester may want to follow up with a phone call or email encouraging the publisher to submit the product to Learning List for an independent review.
+              %p
+                Learning List does not charge publishers any fee for reviewing their products, and the submission process is easy to complete.
+        #title-open-source-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-open-source-video', data: { parent: '#resources-request-review-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Submit an Open-Source Product
+          #resource-open-source-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => '//www.youtube.com/embed/0gvWynb5FKs?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+        #title-open-source.accordion-group
+          .accordion-heading
+            = link_to '#resource-open-source', data: { parent: '#resources-request-review-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Submit an open-source product for review?
+          #resource-open-source.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Any subscriber or authorized user may submit an open-source instructional material for  Learning List's review, at no additional charge. Learning List will develop an independent alignment report and editorial review for each submitted open-source product.
+              %p
+                To submit an open-source instructional material for review, log into Learning List, click on the 
+                %i.sprite-icon.sprite-upload-an-open-source-product 
+                tab in the blue bar at the top of each page. A form will appear. Fill in the requested information, then scroll down to the bottom of the page and click on the 
+                %i.sprite-icon.sprite-submit-an-open-source-product 
+                button.
+              %p
+                If you know educators/parents who are using the product, click on 
+                %i.sprite-icon.sprite-add-a-reference 
+                to provide their names and contact information so that Learning List can solicit their feedback about the product. It is not necessary to submit references in order to request a review. But, the editorial reviews are much richer if they include input from educators who have personally used the product with students. Learning List will complete the alignment report and editorial review within four to six weeks, depending on the number of grade levels submitted. The requester will be informed when the product is published on LearningList.com.
+        #title-see-personal-reviews.accordion-group
+          .accordion-heading
+            = link_to '#resource-see-personal-reviews', data: { parent: '#resources-request-review-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              See the reviews I have written for products on LearningList.com?
+          #resource-see-personal-reviews.accordion-body.collapse
+            .accordion-body-content
+              %p
+                In the 
+                %i.sprite-icon.sprite-my-reviews 
+                box located to the right of your Library, you can access any reviews you have submitted. If you have not submitted any reviews, the “My Reviews” box will be empty.
+
+      / ===============================  Use my Library   ================================================
+
+      #resources-library-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Using Your Library Video   ----------------
+        #title-library-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-library-video', data: { parent: '#resources-library-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Using Your Library
+          #resource-library-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/PDWLBVKlPkM?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+
+        / ----------------   Save products to my library?  ----------------
+        #title-save-products.accordion-group
+          .accordion-heading
+            = link_to '#resource-save-products', data: { parent: '#resources-library-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Save products to my Library?
+          #resource-save-products.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                As you read the product reviews on LearnignList.com, you can “bookmark” the reviews you like so that they are saved to your Library. To save a product review to your Library, click on the “bookmark” symbol 
+                %i.sprite-icon.sprite-bookmark-symbol 
+                to the right of the product’s title.
+        / ----------------   Remove products from my Library?  ----------------
+        #title-remove-products.accordion-group
+          .accordion-heading
+            = link_to '#resource-remove-products', data: { parent: '#resources-library-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Remove products from my Library? 
+          #resource-remove-products.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                To remove a product review from your Library, click on the “remove bookmark” 
+                %i.sprite-icon.sprite-unbookmark 
+                symbol and the product review will be removed.
+        / ----------------   Print the products in my Library?  ----------------
+        #title-print-products.accordion-group
+          .accordion-heading
+            = link_to '#resource-print-products', data: { parent: '#resources-library-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Print the products in my Library? 
+          #resource-print-products.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Click on the printer icon 
+                %i.sprite-icon.sprite-printer-icon 
+                in the top right corner of your Library to print information about all of the products in your Library. The printout will show the grade, subject, alignment percentage, ISBN number and price of each product to make it easy for you to share this information or purchase the product. 
+              %p
+                Printing the products in your Library also helps you document compliance with regulations or grant provisions requiring you to provide instructional materials for each grade and subject that align with a certain percentage of state standards. Sort the products in your Library before printing so that the products for a particular grade and subject will be appear near each other on your printed list.  
+        / ----------------   Email reviews of products I like to my colleagues?   ----------------
+        #title-email-products.accordion-group
+          .accordion-heading
+            = link_to '#resource-email-products', data: { parent: '#resources-library-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Email reviews of products I like to my colleagues? 
+          #resource-email-products.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                To email the reviews for an individual product to another authorized user, click on the “share” icon 
+                %i.sprite-icon.sprite-share-icon 
+                to the right of the product’s title (next to the bookmark). To email the reviews of all of the products in your Library to another authorized user, click on the “share” icon 
+                %i.sprite-icon.sprite-share-icon 
+                in the top right corner of your Library. In either case, if the intended recipient is not an authorized user, he/she will not be able to read the review. 
+
+      / ========================  Search for and compare product reviews  ========================================
+
+      #resources-search-reviews-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Searching/Comparing Reviews Video   ----------------
+        #title-reviews-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-reviews-video', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Searching/Comparing Reviews
+          #resource-reviews-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/7zVCwBIJtyo?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+        
+        / ----------------   Search for product reviews on LearningList.com?   ----------------
+        #title-search-reviews.accordion-group
+          .accordion-heading
+            = link_to '#resource-search-reviews', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Search for product reviews on LearningList.com?
+          #resource-search-reviews.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Once you have logged into Learning List, you can search for product reviews by keyword(s) and/or by using search filters:
+              %ul
+                %li
+                  <strong>To search by key word:</strong> At the top of any page, type the keyword(s) in the field 
+                  %i.sprite-icon.sprite-search-for-reviews
+                  \. The key word search function searches product titles, product descriptions and editorial reviews for the key words or related terms. Thus, keyword 6 searches are likely to yield search results beyond the key words requested. Search results will be more precise if search filters are used alone or in combination with keywords. 
+                %li
+                  <strong>To search using search filters:</strong> At the top of any page, click on 
+                  %i.sprite-icon.sprite-search-filters 
+                  to search by Subject, Publisher, Grade Level, Material Format, % of Standards and (type of) Standards. Once you have selected your search filter(s), click 
+                  %i.sprite-icon.sprite-apply-filters
+                  \. Search filters may be used in combination with a keyword search.  
+
+        / ----------------   Edit/refine my search without starting over?   ----------------
+        #title-edit-search.accordion-group
+          .accordion-heading
+            = link_to '#resource-edit-search', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Edit/refine my search without starting over?
+          #resource-edit-search.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Once your search results appear, click on 
+                %i.sprite-icon.sprite-refine-search 
+                in the top right corner above the list of results to access the search filters which you can use to edit your search without starting over. 
+ 
+        / ----------------   Compare product reviews?  -------------
+        #title-compare-reviews.accordion-group
+          .accordion-heading
+            = link_to '#resource-compare-reviews', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Compare product reviews? 
+          #resource-compare-reviews.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                On the search results page, click on 
+                %i.sprite-icon.sprite-expand-all-reviews 
+                to see the first paragraph of the editorial review, the alignment percentage, and the average of educator ratings and reviews for each product in your search results. Expanding the reviews allows subscribers to scroll down the list of search results and compare this key information about each of the products that meets the search criteria. To see the same information for one product at a time, click on 
+                %i.sprite-icon.sprite-show-reviews 
+                in the yellow bar under the product description. 
+
+        / ----------------   See reviews of products aligned to another state’s standards? ------------
+        #title-reviews-by-state-standards.accordion-group
+          .accordion-heading
+            = link_to '#resource-reviews-by-state-standards', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              See reviews of products aligned to another state’s standards? 
+          #resource-reviews-by-state-standards.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                You will see only the products that are aligned to your state’s standards, unless you click on the 
+                %i.sprite-icon.sprite-search-filters 
+                button and select a different type of standards from the 
+                %i.sprite-icon.sprite-type-of-standards 
+                tab.
+
+        / ----------------   Sort my search results? ------------
+        #title-sort-searches.accordion-group
+          .accordion-heading
+            = link_to '#resource-sort-searches', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Sort my search results?
+          #resource-sort-searches.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Once the list of products matching your search criteria appears, you can re-sort your search results by several criteria, including: publisher, subject, alignment percentage or date added. In the top left corner above the list of search results, click on
+                %i.sprite-icon.sprite-sort-by
+                to open the drop-down menu of criteria by which you can re-sort the results.
+
+        / ----------------   Save searches so that I do not have to recreate them in the future? ------------
+        #title-save-searches.accordion-group
+          .accordion-heading
+            = link_to '#resource-save-searches', data: { parent: '#resources-search-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Save searches so that I do not have to recreate them in the future?
+          #resource-save-searches.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                If your search produces results you like, you can save your search criteria by clicking on the 
+                %i.sprite-icon.sprite-save-search 
+                button at the top of your search results page. You can access search criteria you saved from prior searches in the 
+                %i.sprite-icon.sprite-my-searches 
+                box located to the right of your Library. 
+
+      / ===============================  Alignment Reports   ================================================
+
+      #resources-alignment-reports-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Learning List's alignment reports Video   ----------------
+        #title-alignment-reports-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-alignment-reports-video', data: { parent: '#resources-alignment-reports-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Learning List's Alignment Reports
+          #resource-alignment-reports-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/WwEJDvp2pdg?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+
+        / ----------------   See the alignment percentage for a product?  ------------
+        #title-view-alignment-percentage.accordion-group
+          .accordion-heading
+            = link_to '#resource-view-alignment-percentage', data: { parent: '#resources-alignment-reports-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              See the alignment percentage for a product?
+          #resource-view-alignment-percentage.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Once you have completed a search, click on 
+                %i.sprite-icon.sprite-expand-all-reviews 
+                to see the first paragraph of the editorial review, the alignment percentage, and the average of educator ratings and reviews for each product in your search results. To see the same information for one product at a time, click on 
+                %i.sprite-icon.sprite-show-reviews 
+                under the yellow bar for each product. For non-state-adopted products, the alignment percentage displayed is calculated by Learning List independent of the publisher. For state-adopted products, the alignment percentage displayed was calculated by the state review panel independent of the publisher. 
+
+        / ----------------   Determine the alignment percentage if none is displayed in the Alignment Report box? -------
+        #title-determine-alignment-percentage.accordion-group
+          .accordion-heading
+            = link_to '#resource-determine-alignment-percentage', data: { parent: '#resources-alignment-reports-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Determine the alignment percentage if none is displayed in the Alignment Report box? 
+          #resource-determine-alignment-percentage.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                For <em>supplemental</em> products designed to address a select subset of standards, publishers may choose not to have the alignment percentage displayed in the Alignment Report box on the search results or product details pages. This is because publishers were concerned that subscribers would not look at products with a relatively low alignment percentage. In such cases, a note is displayed in place of the alignment percentage directing subscribers to look at the alignment report. The alignment percentage is listed in top left corner of each Learning List alignment report or on the front page of state alignment reports. 
+
+        / ----------------   Access the alignment report for a product?  ------------
+        #title-access-alignment-report.accordion-group
+          .accordion-heading
+            = link_to '#resource-access-alignment-report', data: { parent: '#resources-alignment-reports-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Access the alignment report for a product?
+          #resource-access-alignment-report.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Once you have conducted a search, from the search results page, click on 
+                %i.sprite-icon.sprite-see-full-reviews 
+                under any product icon to access the product details page for that product. From the product details page, subscribers can access the full alignment report, editorial review and all subscriber ratings and reviews for that product. Simply click on the 
+                %i.sprite-icon.sprite-view-full-report 
+                button at the bottom of the Alignment Report box to access the complete alignment report.
+                %ul
+                  %li
+                    <strong>For state-adopted products:</strong> If the product is state-adopted and the state develops a 
+                    <em>detailed</em> independent verification of the product’s alignment to state standard, Learning List features the state’s alignment report for that product. If, however, the state adoption process did not yield a <em>detailed</em> alignment report, Learning List produces an independent verification of the product’s alignment to state standards. 
+                %ul
+                  %li
+                    <strong>For non-state-adopted products:</strong> If the product is not state-adopted, Learning List produces an independent verification of the product’s alignment to state standards. 
+        / ----------------   Use the alignment reports?   ------------
+        #title-use-alignment-reports.accordion-group
+          .accordion-heading
+            = link_to '#resource-use-alignment-reports', data: { parent: '#resources-alignment-reports-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Use the alignment reports? 
+          #resource-use-alignment-reports.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                Learning List’s alignment reports are designed to assist subscribers (1) <em>select</em> standards-aligned instructional materials, and (2) create standards-aligned lesson plans for each instructional material. For each standard addressed by the product, Learning List attempts to identify three citations (pages, lessons, activities, etc…) that are aligned to the content, context and cognitive demand of the standard. To help educators avoid assigning lessons/activities that are not aligned to the depth and complexity of the standards, any citations that are checked and found not to be aligned are 8 listed in the “Non-Aligned Citations” column and a “Reviewer’s Comment” explains why the citation is not aligned. 
+
+      / ===============================  Editorial Reviews   ================================================
+
+      #resources-editorial-reviews-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Learning List's editorial reviews   ----------------
+        #title-editorial-reviews-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-editorial-reviews-video', data: { parent: '#resources-editorial-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Learning List's Editorial Reviews
+          #resource-editorial-reviews-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/tE8FTe84YaY?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+        / ----------------   Access the editorial review for a product?   ------------
+        #title-access-editorial-review.accordion-group
+          .accordion-heading
+            = link_to '#resource-access-editorial-review', data: { parent: '#resources-editorial-reviews-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Access the editorial review for a product? 
+          #resource-access-editorial-review.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                From the search results page, click on 
+                %i.sprite-icon.sprite-see-full-reviews 
+                under any product icon to access the Product Details page for that product. From the Product Details page, subscribers can access the full editorial review, alignment report and all subscriber ratings and reviews for that product. Simply click on the 
+                %i.sprite-icon.sprite-read-full-review 
+                button at the bottom of the Editorial Review box to access the editorial review for the product. 
+
+      / ===============================  Educator Ratings and Reviews    ===========================================
+
+      #resources-ratings-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Educator ratings and reviews video   ----------------
+        #title-ratings-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-ratings-video', data: { parent: '#resources-ratings-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Educator Ratings and Reviews
+          #resource-ratings-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/kNeObzrPs-o?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+        / ----------------   Read all of the Educator ratings and reviews for a product?   ------------
+        #title-read-all-ratings.accordion-group
+          .accordion-heading
+            = link_to '#resource-read-all-ratings', data: { parent: '#resources-ratings-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Read all of the educator ratings and reviews for a product?
+          #resource-read-all-ratings.accordion-body.collapse
+            .accordion-body-content
+              %p 
+                From the search results page, click on 
+                %i.sprite-icon.sprite-see-full-reviews 
+                under any product icon to access the Product Details page for that product. From the Product Details page, subscribers can access the full editorial review, alignment report and all subscriber ratings and reviews for that product. Simply click on 
+                %i.sprite-icon.sprite-read-a-review 
+                to read all of the reviews that have been submitted. 
+        / ----------------   Submit a rating and/or review of the product?   ------------
+        #title-submit-rating.accordion-group
+          .accordion-heading
+            = link_to '#resource-submit-rating', data: { parent: '#resources-ratings-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Submit a rating and/or review of the product?
+          #resource-submit-rating.accordion-body.collapse
+            .accordion-body-content
+              %p
+                From the search results page, click on 
+                %i.sprite-icon.sprite-see-full-reviews 
+                under any product icon to access the Product Details page for that product. From the Product Details page, subscribers can access the full editorial review, alignment report and all subscriber ratings and reviews for that product.
+              %p
+                Click on 
+                %i.sprite-icon.sprite-submit-a-review 
+                to submit your own review of the product. The purpose of the educator reviews is to provide <em>constructive</em> information that will help educators decide whether the product would meet their students’ needs. Educators are asked to rate and review the products according to the criteria provided, which are aligned to effective teaching practices. Click on the 
+                %i.sprite-icon.sprite-info-icon 
+                next to any of the criteria to see definition of that criteria. 
+              %p
+                As mentioned, educator reviews should provide information to assist other educators in selecting the right instructional materials for their students. Reviews containing defamatory, slanderous, or libelous content will be removed. A second transgression will result in termination of the subscriber account. 
+
+      / ===============================  Fill-in-the-Gap   ================================================
+
+      #resources-fill-in-the-gap-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Learning List's FITG tool Video   ----------------
+        #title-fill-in-the-gap-video.accordion-group
+          .accordion-heading
+            = link_to '#resource-fill-in-the-gap-video', data: { parent: '#resources-fill-in-the-gap-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Video: Learning List's Fill-in-the-gap Tool
+          #resource-fill-in-the-gap-video.accordion-body.collapse
+            .accordion-body-content
+              %p
+                %iframe{:width => '600', :height => '336', :src => 'https://www.youtube.com/embed/jx8DI4pkB38?autoplay=0&autohide=1&fs=0&showinfo=0&loop=1&modestbranding=1&rel=0', :frameborder => '0'}
+        / ----------------   Find and use the Fill-in-the-Gap tool?  ------------
+        #title-use-fill-in-the-gap.accordion-group
+          .accordion-heading
+            = link_to '#resource-use-fill-in-the-gap', data: { parent: '#resources-fill-in-the-gap-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Find and use the Fill-in-the-Gap tool?
+          #resource-use-fill-in-the-gap.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Once you click on 
+                %i.sprite-icon.sprite-see-full-reviews 
+                for a particular product, if that product does not align to 100% of the standards, the Fill-in-the-Gap tool will be visible at the bottom of the page. The Fill-In-the-Gap tool will suggest other products <em>that Learning List has reviewed</em> which align to the standards that are not addressed in the product you are investigating. 
+        / ----------------   Find products that in the aggregate are aligned to 100% of the standards?  ------------
+        #title-find-products.accordion-group
+          .accordion-heading
+            = link_to '#resource-find-products', data: { parent: '#resources-fill-in-the-gap-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Find products that in the aggregate are aligned to 100% of the standards?
+          #resource-find-products.accordion-body.collapse
+            .accordion-body-content
+              %p
+                As you read reviews of products you like, bookmark 
+                %i.sprite-icon.sprite-bookmark-symbol 
+                those products to your Library. If a particular product does not align to 100% of the standards, the Fill-in-the-Gap tool (visible from the “View Details” page for that product) will automatically identify other products <em>that Learning List has reviewed</em> that align to the remaining standards. You can learn more about each “Fill-in-the-Gap” product by clicking on the product’s icon. 
+              %p
+                Bookmark 
+                %i.sprite-icon.sprite-bookmark-symbol 
+                any complementary products identified by Fill-in-the-Gap to your Library and then print your Library. To print your Library, click on the printer icon 
+                %i.sprite-icon.sprite-printer-icon 
+                in the top right corner of your Library. The printout will show the grade, subject, alignment percentage for all the products in your library. That document, along with Learning List’s alignment reports show that you have selected products that in the aggregate align to 100% of the standards.
+
+      / ===============================  What is this icon...   ================================================
+
+      #resources-icons-accordion.accordion.resources.big-accordion.hide
+
+        / ----------------   Bookmark  ------------
+        #title-bookmark-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-bookmark-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Bookmark
+              %p.sprite-icon.sprite-bookmark-symbol 
+          #resource-bookmark-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on the “bookmark” icon saves the product you are viewing to your Library.  
+        / ----------------   un-bookmark  ------------
+        #title-un-bookmark-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-un-bookmark-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Un-bookmark
+              %p.sprite-icon.sprite-unbookmark 
+          #resource-un-bookmark-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on the “un-bookmark” icon removes the product from your Library.  
+        / ----------------    Email/share reviews   ------------
+        #title-share-reviews-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-share-reviews-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Email/Share Reviews 
+              %p.sprite-icon.sprite-share-icon 
+          #resource-share-reviews-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on the “share” icon allows you to email a product’s reviews to another Learning List subscriber or authorized user. Clicking on the “share” icon on the top of your Library allows you 10 to email the reviews for all of the products in your Library to another subscriber or authorized user.   
+        / ----------------   Sort/List products   ------------
+        #title-sort-icons.accordion-group
+          .accordion-heading
+            = link_to '#resource-sort-icons', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Sort/List Products 
+              %p.sprite-icon.sprite-list-icon
+              %p.sprite-icon.sprite-image-icon
+          #resource-sort-icons.accordion-body.collapse
+            .accordion-body-content
+              %p
+                These icons change the presentation of the products in your Library or search results. By default, the products are presented in a “list” format, which shows the image, title, and description of each product. Click on the “image” icon to change the presentation so that only the product images and titles are visible. Click on the “list” icon to return to the “list” presentation.   
+        / ----------------   Compare reviews   ------------
+        #title-compare-reviews-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-compare-reviews-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Compare Reviews 
+              %p.sprite-icon.sprite-expand-all-reviews 
+          #resource-compare-reviews-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on the “Expand All Reviews” icon shows the first paragraph of the editorial review, the alignment percentage, and the average of educator ratings and reviews for each product in your search results. Expanding the reviews allows you to scroll down the list of search results and compare this key information for each of the products that meets your search criteria.   
+        / ----------------   Print  ------------
+        #title-print-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-print-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Print
+              %p.sprite-icon.sprite-printer-icon 
+          #resource-print-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on the “print” icon allows you to print the items in your Library. This makes it easy to document compliance with regulations that require districts/campuses to provide instructional materials that align with 100% of the state standards.   
+        / ----------------   List of reviews you submitted   ------------
+        #title-list-your-reviews-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-list-your-reviews-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              List of reviews you submitted
+              %p.sprite-icon.sprite-my-reviews 
+          #resource-list-your-reviews-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on this icon opens a list of the reviews you have submitted for products on Learning List. 
+        / ----------------   List of your saved search criteria/results   ------------
+        #title-list-your-saved-searches-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-list-your-saved-searches-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              List of your saved search criteria/results
+              %p.sprite-icon.sprite-my-searches 
+          #resource-list-your-saved-searches-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on this icon, located to the right of your Library, opens a list of the search criteria and the accompanying search results you have saved during prior searches. 
+        / ----------------   Saves current search criteria and results  ------------
+        #title-save-search-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-save-search-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Saves current search criteria and results
+              %p.sprite-icon.sprite-save-search 
+          #resource-save-search-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                If you like the results of a completed search, clicking on this icon at the top of the search results page saves the search criteria and accompanying search results to “My Searches” located to the right of your Library.
+        / ----------------   Access the “product details” page for the product  ------------
+        #title-product-details-icon.accordion-group
+          .accordion-heading
+            = link_to '#resource-product-details-icon', data: { parent: '#resources-icons-accordion', toggle: 'collapse' }, class:  'accordion-toggle'  do
+              %i.collapse-icon
+              Access the “product details” page for the product
+              %p.sprite-icon.sprite-see-full-reviews
+          #resource-product-details-icon.accordion-body.collapse
+            .accordion-body-content
+              %p
+                Clicking on this icon under a product image takes you to the “product details” page for that product where you can access the product’s editorial review, alignment report, educator ratings and reviews, and see the complementary Fill-in-the-Gap products. 
+       
+    .clear

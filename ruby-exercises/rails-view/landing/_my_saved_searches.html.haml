@@ -1,0 +1,15 @@
+.accordion-group
+  .accordion-heading
+    %a.accordion-toggle{'data-parent' => '#right-sidebar-accordion', 'data-toggle' => 'collapse', :href => '#saved-searches'}
+      My Saved Searches
+      %i.font-icon-dropdown_arrow
+  #saved-searches.accordion-body.collapse
+    .accordion-inner
+      .sidebar-items-container.sidebar-search-item
+        - saved_searches.each do |search|    
+          .sidebar-item{ id: "#{search.id}-search" }
+            = link_to subscriber_search_index_path(saved_search_id: search.id), class: 'title' do
+              = raw ::Domain::Subscriber::Library::SavedSearchTerms.! search.request, search.filters 
+            .btn-table
+              = link_to "#{search.results_count} Results", subscriber_search_index_path(saved_search_id: search.id), class: 'btn btn-left font-icon-menu'
+              = link_to 'Delete', subscriber_saved_search_path(search), class: 'btn btn-right font-icon-trash', data: { confirm: 'init', modal: '#delete-search-modal' }, method: :delete, remote: true

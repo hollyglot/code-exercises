@@ -1,0 +1,18 @@
+.mp-grid-container
+  - if products.any?
+    - products.in_groups_of(3) do |product_group|
+      - if product_group.any?
+        .mp-grid-items
+          - product_group.each do |product|
+            - if product.present? && !product.unpublished?
+              = render 'subscriber/library/products/product_in_grid', product: product
+          .clear
+    #compare-dialog{:title => "Maximum products selected"}
+      %p You may compare up to three products at a time. If you wish to compare more, you can export or print the comparisons.
+    .compare-dialog-container
+
+    :javascript
+      initializeLibraryCompareToolbarFunctions();
+
+  - else
+    = render 'subscriber/library/landing/empty_library'

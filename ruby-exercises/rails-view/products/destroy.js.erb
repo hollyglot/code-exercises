@@ -1,0 +1,15 @@
+if ($('.my-library').length){
+  <% if resource.products.any? %>
+    if ($('.mp-grid-container').is(':visible')) {
+      var sortBy = $("#sort-by").val();
+      $.getScript("library?sort_by=" + sortBy + "&layout=grid");
+    }else{
+      var sortBy = $("#sort-by").val();
+      $.getScript("library?sort_by=" + sortBy + "&layout=list");
+    }
+   <%else%>
+      $('.mp-content').empty().html('<%= j render 'subscriber/library/landing/empty_library' %>');
+   <%end%>
+}
+
+$('.products-count').text('You have <%= pluralize(resource.products.count, 'material')%> in your library');

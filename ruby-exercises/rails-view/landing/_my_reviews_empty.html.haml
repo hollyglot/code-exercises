@@ -1,0 +1,13 @@
+.accordion-group.first
+  .accordion-heading
+    = link_to '#my-reviews-empty', class: 'accordion-toggle', data: { parent: '#right-sidebar-accordion', toggle: 'collapse' } do
+      My Reviews (empty)
+      %i.font-icon-dropdown_arrow
+  #my-reviews-empty.accordion-body.collapse
+    .accordion-inner
+      .sidebar-items-container.empty
+        .empty-sprite.sprite-my-reviews-empty
+        %h2
+          When you submit a review of a product, a copy of your review will appear here. 
+          = link_to 'Read more', subscriber_how_do_i_path(:reviews => true)
+          about submitting reviews.

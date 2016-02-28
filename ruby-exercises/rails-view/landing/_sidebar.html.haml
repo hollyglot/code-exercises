@@ -1,0 +1,12 @@
+.accordion.sidebar-accordion#right-sidebar-accordion
+  - if reviews.any?
+    = render 'subscriber/library/landing/my_reviews', reviews: reviews
+  - else
+    = render 'subscriber/library/landing/my_reviews_empty'
+  - if saved_searches.any?
+    = render 'subscriber/library/landing/my_saved_searches', saved_searches: saved_searches
+  - else
+    = render 'subscriber/library/landing/my_search_empty'
+  
+  = render 'subscriber/library/landing/training_resources'
+

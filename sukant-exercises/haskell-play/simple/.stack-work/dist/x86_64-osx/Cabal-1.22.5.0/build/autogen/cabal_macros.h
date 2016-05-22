@@ -49,12 +49,5 @@
   (major1) == 0 && (major2) <  67 || \
   (major1) == 0 && (major2) == 67 && (minor) <= 0)
 
-/* tool pkg-config-0.29 */
-#define TOOL_VERSION_pkg_config "0.29"
-#define MIN_TOOL_VERSION_pkg_config(major1,major2,minor) (\
-  (major1) <  0 || \
-  (major1) == 0 && (major2) <  29 || \
-  (major1) == 0 && (major2) == 29 && (minor) <= 0)
-
 #define CURRENT_PACKAGE_KEY "simpl_KGxVTV6Obxb9vekqkAzy3h"
 

@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-02-03 03:41:53.991654 UTC
+2016-03-29 01:56:27.523896 UTC
 
 interface main@main:Main 7103
-  interface hash: ed510d98fd5204a55f8fa7afb926b980
-  ABI hash: 3f8620d3a0552bf53c78df3199cef1be
+  interface hash: 5d83c3570dccdecfc5096201461b146f
+  ABI hash: b9fe52274ad7dba2f14576a642ca7fed
   export-list hash: cea815e4754cd1eb93a555fa618c3daf
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 40a957bb82c28a613fd05355a9320443
@@ -22,13 +22,13 @@ family instance modules: base-4.8.2.0:Control.Applicative
                          base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
 import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
-import  -/  simple-0.1.0.0@simpl_KGxVTV6Obxb9vekqkAzy3h:Lib 52dd95e19961fa0eddea889a33397882
-1147431e562f0b30afb2141d9f5b3a23
+import  -/  simple-0.1.0.0@simpl_KGxVTV6Obxb9vekqkAzy3h:Lib 5bc3fdb881919ccd2f0a6223089c0c7f
+f8fc5ace15871c3f158393fc7e7e26be
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <L,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.someFunc1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-3c76aaade10ebd0e6cf6e9fd5d8c9289
+04974899ab2466e59ca309cd2541a2b8
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
